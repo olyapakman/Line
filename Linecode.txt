@@ -1,0 +1,99 @@
+
+
+public class Line {
+
+int m1;
+int n1;
+
+public Line (int k; int b) {
+
+this.m1 = k;
+this.n1 = b;
+
+}
+
+public String intersection (Line line) {
+int x;
+int y;
+int a = this.m1;
+int b = this.n1;
+int c = line.m1;
+int d = line.n1;
+
+x = (d - b)/(a - c);
+y = a * x + b;
+
+
+}
+
+}
+
+
+
+
+
+
+
+public class Line {
+
+	int m1;
+	int n1;
+
+    public Line(int k, int b) {
+		this.m1 = k;
+		this.n1 = b;
+    }
+
+    public Point intersection(Line other) {
+        throw new UnsupportedOperationException();
+		int x;
+		int y;
+		int a = this.m1;
+		int b = this.n1;
+		int c = other.m1;
+		int d = other.n1;
+
+		x = (d - b)/(a - c);
+		y = a * x + b;
+				
+    }
+
+}
+
+
+
+
+public class Point {
+    private final int x;
+    private final int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("(%d;%d)", x, y);
+    }
+}
+
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int k1 = scanner.nextInt();
+        int b1 = scanner.nextInt();
+        int k2 = scanner.nextInt();
+        int b2 = scanner.nextInt();
+
+        Line line1 = new Line(k1,b1);
+        Line line2 = new Line(k2,b2);
+
+        System.out.println("result is " + line1.intersection(line2));
+
+    }
+
+}
